@@ -1,0 +1,121 @@
+{
+  text-align:center;
+font-family:Tahoma,Verdana,Arial,sans-serif;
+  font-weight:bold;
+}
+body{
+  background:black;
+}
+
+.title{
+color:gold;
+font-size:36px;
+margin-top:25px;
+letter-spacing:3px;
+font-weight:bold;
+text-align:center;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top:25px;
+}
+
+.menu button{
+font-family:"Comic Sans MS",cursive;
+font-weight:bold;
+width:230px;
+padding:13px;
+margin:10px;
+font-size:17px;
+background:#111;
+color:gold;
+border:1px solid gold;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.menu button:hover{
+background:gold;
+color:black;
+}
+
+.active{
+background:gold !important;
+color:black !important;
+}
+
+.gallery-container{
+display:flex;
+justify-content:center;
+margin-top:25px;
+}
+
+.gallery{
+display:none;
+flex-wrap:wrap;
+justify-content:center;
+max-width:900px;
+animation:fade 0.6s ease;
+}
+
+.gallery img{
+width:260px;
+height:180px;
+object-fit:cover;
+margin:12px;
+border-radius:14px;
+transition:0.4s;
+border:1px solid gold;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.08) rotate(1deg);
+box-shadow:0 0 20px gold;
+}
+
+/* fade animation */
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* LIGHTBOX */
+#lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+}
+
+#lightbox img{
+max-width:80%;
+max-height:80%;
+border-radius:10px;
+border:2px solid gold;
+}
+
+#lightbox span{
+position:absolute;
+top:20px;
+right:35px;
+font-size:45px;
+color:gold;
+cursor:pointer;
+  }
